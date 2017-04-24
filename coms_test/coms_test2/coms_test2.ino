@@ -4,7 +4,7 @@
 #define txPin 1
 #define ledPin 13
 
-SoftwareSerial xbee(rxPin, txPin)
+SoftwareSerial xbee(rxPin, txPin);
 
 void setup() {
   // put your setup code here, to run once:
@@ -13,17 +13,17 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   xbee.begin(9600);
   pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin,LOW);
+  digitalWrite(ledPin, LOW);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  while((xbee.available())!)
+  while((xbee.available())>0)
   {
     xbee.print("B");
   } 
   
- if(xbee.read == "A") 
+ if(xbee.read() == "A") 
   {
     digitalWrite(ledPin,HIGH);
     delay(700);
