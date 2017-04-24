@@ -12,13 +12,25 @@ void setup() {
   pinMode(txPin, OUTPUT);
   pinMode(ledPin, OUTPUT);
   xbee.begin(9600);
-  Serial.begin(9600);
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin,LOW);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.println("Waiting");
-  Serial.println(xbee.read());
+  while((xbee.available())!)
+  {
+    xbee.print("B");
+  }
+
+  if(xbee.read == "A") 
+  {
+    digitalWrite(ledPin,HIGH);
+    delay(700);
+    digitalWrite(ledPin,LOW);
+    delay(700);
+    digitalWrite(ledPin,HIGH);
+    delay(700);
+    digitalWrite(ledPin,LOW);
+  }
 }
