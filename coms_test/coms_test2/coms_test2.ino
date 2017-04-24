@@ -18,12 +18,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+<<<<<<< HEAD
   while((xbee.available())!)
   {
     xbee.print("B");
   }
 
   if(xbee.read == "A") 
+=======
+ if(xbee.read == "A") 
+>>>>>>> origin/master
   {
     digitalWrite(ledPin,HIGH);
     delay(700);
@@ -32,5 +36,10 @@ void loop() {
     digitalWrite(ledPin,HIGH);
     delay(700);
     digitalWrite(ledPin,LOW);
+<<<<<<< HEAD
+=======
+    delay(1000);
+    xbee.write("B");
+>>>>>>> origin/master
   }
 }
