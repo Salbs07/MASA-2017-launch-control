@@ -1,7 +1,7 @@
 #include<SoftwareSerial.h>
 
-#define rxPin 2
-#define txPin 3
+#define rxPin 0
+#define txPin 1
 #define ledPin 13
 
 #SoftwareSerial xbee = SoftwareSerial(rxPin, txPin)
