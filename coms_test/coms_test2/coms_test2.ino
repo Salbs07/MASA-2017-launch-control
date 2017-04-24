@@ -4,7 +4,7 @@
 #define txPin 1
 #define ledPin 13
 
-#SoftwareSerial xbee = SoftwareSerial(rxPin, txPin)
+SoftwareSerial xbee(rxPin, txPin)
 
 void setup() {
   // put your setup code here, to run once:
