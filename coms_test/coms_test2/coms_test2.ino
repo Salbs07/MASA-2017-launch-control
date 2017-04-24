@@ -13,7 +13,8 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   xbee.begin(9600);
   Serial.begin(9600);
-  Serial.println("Starting");
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin,LOW);
 }
 
 void loop() {
