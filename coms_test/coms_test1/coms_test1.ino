@@ -11,10 +11,26 @@ void setup() {
   pinMode(rxPin, INPUT);
   pinMode(txPin, OUTPUT);
   xbee.begin(9600);
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin,LOW);
+  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  xbee.print("Jacob hates us");
-  delay(666);
+  while((xbee.available())!)
+  {
+    xbee.print("A");
+  }
+
+  if(xbee.read == "B") 
+  {
+    digitalWrite(ledPin,HIGH);
+    delay(700);
+    digitalWrite(ledPin,LOW);
+    delay(700);
+    digitalWrite(ledPin,HIGH);
+    delay(700);
+    digitalWrite(ledPin,LOW);
+  }
 }
