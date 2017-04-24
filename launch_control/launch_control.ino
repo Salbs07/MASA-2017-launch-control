@@ -28,6 +28,7 @@ void setup() {
   
   if (digitalRead(checkPin) == LOW) // If low (True) then it is launch box
   {
+    //launch box
     isLaunchController = false;
     // Sets output pins that control relays 
     for(int i = 3; i < 10; i++)
@@ -50,28 +51,23 @@ void setup() {
     int 21 = pressure1;
     int 22 = pressure2;
     int 23 = pressure3;
+
+    while(
   }
   else //controller side
   {
     isLaunchController = true;
+
+    string pins[] = {jacob, hates, us, heater, cycle, heater2, vent, extra, unused, f1ll, bleed, ignite};
+    
     // Sets pins connected to buttons
     for(int i = 3; i < 12; i++)
     {
       pinMode(i,INPUT_PULLUP);
       digitalWrite(i, HIGH);
-      ("bouncer" + i).attach(i); // remove bouncing
-      ("bouncer" + i).interval(5);
+      ("bouncer_" + pins[i]).attach(i); // remove bouncing
+      ("bouncer_" + pins[i]).interval(5);
     }
-    int 3 = heater;
-    int 4 = cycle;
-    int 5 = heater2;
-    int 6  = vent;
-    int 7 = extra;
-    int 8 = unused;
-    int 9 = f1ll;
-    int 10 = bleed;
-    int 11 = ignite;
-
   }
 
 void loop() {
